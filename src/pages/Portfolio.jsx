@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PhotoModal from "../components/PhotoModal";
 import { photos } from "../data/photos";
+import PhotoCard from "../components/PhotoCard";
 
 function Portfolio() {
   const [selectedPhoto, setSelectedPhoto] = useState(null)
@@ -11,12 +12,11 @@ function Portfolio() {
 
       <div className="grid">
     {photos.map((photo) => (
-      <img
-      key={photo.id}
-      src={photo.image} 
-      alt={photo.title}
-      onClick={() => setSelectedPhoto(photo)}
-      />
+      <PhotoCard
+    key={photo.id}
+    photo={photo}
+    onClick={setSelectedPhoto}
+  />
     ))}
       </div>
       <PhotoModal
