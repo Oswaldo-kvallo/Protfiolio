@@ -7,7 +7,8 @@ function Portfolio() {
   const [selectedPhoto, setSelectedPhoto] = useState(null)
 
   return (
-    <div>
+    <section id="portfolio">
+      <div>
       <h1>Mi portafolio</h1>
 
       <div className="grid">
@@ -24,6 +25,7 @@ function Portfolio() {
       onClose={() => setSelectedPhoto(null)}
       />
     </div>
+    </section>
   );
 }
 
